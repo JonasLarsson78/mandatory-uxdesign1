@@ -26,9 +26,16 @@ background: #ffffff;
 .main-header--text{
   font-family: "Roboto", sans-serif;
   color: #ffffff;
- 
 }
-
+.main-header--disabled{
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  top: -24px;
+  visibility: hidden;
+}
+/* ------------------------ END MAIN ------------------------------- */
 /* CSS TEXT FIELD */
 .mds-text-field {
   width: 280px;
@@ -203,7 +210,7 @@ left: 120px;
   display: block;
 }
 /* ------------------------ END CHECKBOX ------------------------------- */
-
+/*  CSS RADIOBUTTON */
 .mds-radio {
   display: block;
   position: relative;
@@ -265,3 +272,4 @@ left: 120px;
 	border-radius: 10px;
 	background: #3700b3;
 }
+/* ------------------------ END RADIOBUTTON ------------------------------- */
