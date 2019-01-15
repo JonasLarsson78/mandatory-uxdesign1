@@ -33,12 +33,12 @@
 }
 .mds-text-field__label--active {
   font-size: 13px;
-  color: #9c27b0;
+  color: #3700b2;
   top: 25%;
   background-color: white;
 }
 .mds-text-field__input--active {
-  border-bottom: 3px solid #9c27b0;
+  border-bottom: 3px solid #3700b2;
   height: 40px;
   padding-top: 16px;
 }
@@ -115,7 +115,7 @@
   -ms-user-select: none;
   user-select: none;
 }
-.mds-checkbox__checkbox {
+.mds-checkbox__input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -132,11 +132,11 @@
   border: 3px solid #9e9e9e;
   border-radius: 4px;
 }
-.mds-checkbox__checkbox:checked ~ .mds-checkbox__label {
+.mds-checkbox__input:checked ~ .mds-checkbox__label {
   background: #3700b3;
   border: 3px solid #3700b3;
 }
-.mds-checkbox__checkbox:checked:disabled ~ .mds-checkbox__label {
+.mds-checkbox__input:checked:disabled ~ .mds-checkbox__label {
   background: #90a4ae;
   border: 3px solid #90a4ae;
 }
@@ -150,8 +150,71 @@
   font-weight: bold;
   font-size: 24px;
 }
-.mds-checkbox__checkbox:checked ~ .mds-checkbox__label:after {
+.mds-checkbox__input:checked ~ .mds-checkbox__label:after {
   display: block;
 }
 /* ------------------------ END CHECKBOX ------------------------------- */
 
+.mds-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Roboto", sans-serif;
+}
+
+.mds-radio .mds-radio__input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.mds-radio__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  border: 4px solid #90a4ae;
+}
+
+
+
+.mds-radio .mds-radio__input:checked ~ .mds-radio__checkmark {
+  background-color: #ffffff;
+  border: 4px solid #3700b2;
+}
+.mds-radio .mds-radio__input:checked:disabled ~ .mds-radio__checkmark {
+  border: 4px solid #90a4ae;
+}
+
+.mds-radio__checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.mds-radio .mds-radio__input:checked ~ .mds-radio__checkmark:after {
+  display: block;
+}
+.mds-radio .mds-radio__input:checked:disabled ~ .mds-radio__checkmark:after {
+  display: block;
+  background: #90a4ae;
+}
+
+.mds-radio .mds-radio__checkmark:after {
+ 	top: 3px;
+	left: 3px;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background: #3700b3;
+}

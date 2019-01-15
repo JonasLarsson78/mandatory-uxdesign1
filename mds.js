@@ -35,12 +35,22 @@ mds.textField(container);
 /* ---------------- Disabled ------------------ */
 
 function disabledAll() {
+  let radios = document.querySelectorAll(".mds-radio__input");
+  for (let i = 0; i < radios.length; i++) {
+    let radio = radios[i];
+    radio.setAttribute("disabled", true);
+  }
   document.querySelector(".mds-text-field__input").disabled = true;
   document.querySelector(".mds-switch__checkbox").disabled = true;
-  document.querySelector(".mds-checkbox__checkbox").disabled = true;
+  document.querySelector(".mds-checkbox__input").disabled = true;
 }
 function undisabledAll() {
+  let radios = document.querySelectorAll(".mds-radio__input");
+  for (let i = 0; i < radios.length; i++) {
+    let radio = radios[i];
+    radio.removeAttribute("disabled");
+  }
   document.querySelector(".mds-text-field__input").disabled = false;
   document.querySelector(".mds-switch__checkbox").disabled = false;
-  document.querySelector(".mds-checkbox__checkbox").disabled = false;
+  document.querySelector(".mds-checkbox__input").disabled = false;
 }
