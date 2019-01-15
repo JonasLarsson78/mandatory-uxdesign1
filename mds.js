@@ -32,7 +32,7 @@ function noop() {}
 const container = document.querySelector(".mds-text-field");
 mds.textField(container);
 
-/* ---------------- Disabled ------------------ */
+/* ---------------- Disabled ALL tillhör inte UC Lab - Bara för att Testa disabelmode. ------------------ */
 
 function disabledAll() {
   let radios = document.querySelectorAll(".mds-radio__input");
@@ -40,9 +40,15 @@ function disabledAll() {
     let radio = radios[i];
     radio.setAttribute("disabled", true);
   }
+  let checks = document.querySelectorAll(".mds-checkbox__input");
+  for (let i = 0; i < checks.length; i++) {
+    let check = checks[i];
+    check.setAttribute("disabled", true);
+  }
+
   document.querySelector(".mds-text-field__input").disabled = true;
   document.querySelector(".mds-switch__checkbox").disabled = true;
-  document.querySelector(".mds-checkbox__input").disabled = true;
+  document.querySelector(".main-header--main").style.background = "#757575";
 }
 function undisabledAll() {
   let radios = document.querySelectorAll(".mds-radio__input");
@@ -50,7 +56,12 @@ function undisabledAll() {
     let radio = radios[i];
     radio.removeAttribute("disabled");
   }
+  let checks = document.querySelectorAll(".mds-checkbox__input");
+  for (let i = 0; i < checks.length; i++) {
+    let check = checks[i];
+    check.removeAttribute("disabled");
+  }
   document.querySelector(".mds-text-field__input").disabled = false;
   document.querySelector(".mds-switch__checkbox").disabled = false;
-  document.querySelector(".mds-checkbox__input").disabled = false;
+  document.querySelector(".main-header--main").style.background = "#3700b2";
 }

@@ -1,47 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<script type="text/javascript" src="mds.js" defer></script>
-<link rel="stylesheet" type="text/css" href="mds.css">
-<title>UX Lab1</title>
-</head>
-<body>
-<!-- TEXT FIELD --><br><br>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="mds.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="mds.css" />
+    <title>UX Lab1</title>
+  </head>
+  <body><br><br>
+      <main class="main-header">
+          <div class="main-header__head">
+                <div class="main-header--main"><h1 class="main-header--text">UX Lab 1</h1></div>
+<!-- ADD Objects here..  -->
+
+<!-- TEXT FIELD --><br /><br />
 <div class="mds-text-field">
-    <div class="mds-text-field__item">      
-      <input class="mds-text-field__input" type="text" placeholder=" " >
-      <label class="mds-text-field__label">Namn</label>
-    </div>
-</div>
-<!-- SWITCH --><br><br>
+        <div class="mds-text-field__item">
+          <input class="mds-text-field__input" type="text" placeholder=" " />
+          <label class="mds-text-field__label">Namn</label>
+        </div>
+      </div>
+<!-- TEXT FIELD END  -->
+<!-- SWITCH --><br /><br />
+<div class="mds-switch--text">OFF / ON</div>
 <div class="mds-switch">
-    <input type="checkbox" name="mds-switch" class="mds-switch__checkbox" id="myonoffswitch" checked>
-    <label class="mds-switch__label" for="myonoffswitch"></label>
-</div>
-<!-- CHECKBOX --><br><br>
+        <input type="checkbox" name="mds-switch" class="mds-switch__checkbox" id="myonoffswitch" checked/>
+        <label class="mds-switch__label" for="myonoffswitch"></label>
+      </div>
+<!-- END  -->
+ <!-- CHECKBOX --><br /><br />
+ <div class="mds-checkbox--text">Get email newsletters.</div>
+ <div class="mds-checkbox">
+        <input type="checkbox" name="mds-checkbox" class="mds-checkbox__input" id="myonoffcheckbox1" checked />
+        <label class="mds-checkbox__label" for="myonoffcheckbox1"></label>
+      </div>
+<div class="mds-checkbox--text">Accept our terms.</div>      
 <div class="mds-checkbox">
-    <input type="checkbox" name="mds-checkbox" class="mds-checkbox__input" id="myonoffcheckbox" checked>
-    <label class="mds-checkbox__label" for="myonoffcheckbox"></label>
-</div>
-<!--  RADIOBUTTON --><br><br>
+        <input type="checkbox" name="mds-checkbox" class="mds-checkbox__input" id="myonoffcheckbox2" />
+        <label class="mds-checkbox__label" for="myonoffcheckbox2"></label>
+      </div>    
+<!-- END  -->
+<!--  RADIOBUTTON --><br /><br />
 
-        
-        
-        
-<label class="mds-radio">On
-        <input class="mds-radio__input" type="radio" checked="checked" name="radio">
-        <span class="mds-radio__checkmark"></span>
-      </label>
-      <label class="mds-radio">Off
-        <input class="mds-radio__input" type="radio" name="radio">
-        <span class="mds-radio__checkmark"></span>
-      </label>
+<label class="mds-radio"
+>Kvinna
+<input
+  class="mds-radio__input"
+  type="radio"
+  checked="checked"
+  name="radio"
+/>
+<span class="mds-radio__checkmark"></span>
+</label>
+<label class="mds-radio"
+>Man <input class="mds-radio__input" type="radio" name="radio" />
+<span class="mds-radio__checkmark"></span>
+</label>
+
+<!-- END  -->
+          </div>
+        </main>
     
-
-<br><br><br>
-<button onclick="disabledAll()">Disabled All</button> <button onclick="undisabledAll()">Undisabled All</button>
-</body>
+<center>
+    <br /><br />
+    <button onclick="disabledAll()">Disabled All</button>
+    <button onclick="undisabledAll()">Undisabled All</button>
+    </center>
+  </body>
 </html>
