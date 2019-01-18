@@ -9,32 +9,24 @@ function textField(element) {
   let selectInput = element.querySelector(".mds-text-field__input");
   let label = element.querySelector(".mds-text-field__label");
 
-  if (selectInput.value) {
-    selectInput.classList.add("mds-text-field__input--active");
-    label.classList.add("mds-text-field__label--active");
-  }
-
-  selectInput.addEventListener("input", function() {
-    if (selectInput.value) {
-      // Byt klass till mds-text-field--inputActive
-      selectInput.classList.add("mds-text-field__input--active");
+  selectInput.addEventListener("focus", function() {
+    label.classList.remove("mds-text-field__label--active__color");
+    if (selectInput) {
       label.classList.add("mds-text-field__label--active");
-    } else if (selectInput.value === "") {
-      // byt tillbaka till mds-text-field--inputActive
-      selectInput.classList.remove("mds-text-field__input--active");
-      label.classList.remove("mds-text-field__label--active");
     }
+  });
+
+selectInput.addEventListener("blur", function() {
+  label.classList.add("mds-text-field__label--active__color");
+  if (selectInput.value === "") {
+    label.classList.remove("mds-text-field__label--active");
+  }
   });
 }
 
-function noop() {}
+function noop() {
 
-const containers = document.querySelectorAll(".mds-text-field");
-for (let container of containers){
-    mds.textField(container);
 }
-
-
 /* ---------------- Disabled ALL tillhör inte UX Lab - Bara för att Testa disabelmode. ------------------ */
 
 function disabledAll() {
