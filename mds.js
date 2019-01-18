@@ -42,6 +42,11 @@ function disabledAll() {
   for (let text of texts) {
     text.setAttribute("disabled", true);
   }
+  let labels = document.querySelectorAll(".mds-text-field__label");
+  for (let label of labels) {
+    label.style.background = "darkgray";
+  }
+  
   document.querySelector(".mds-switch__checkbox").disabled = true;
   document.querySelector(".main-header--main").style.background = "#757575";
   document.querySelector(".main-header--disabled").style.visibility = "visible";
@@ -59,6 +64,10 @@ function undisabledAll() {
   let texts = document.querySelectorAll(".mds-text-field__input");
   for (let text of texts) {
     text.removeAttribute("disabled");
+  }
+  let labels = document.querySelectorAll(".mds-text-field__label");
+  for (let label of labels) {
+    label.style.background = "white";
   }
   document.querySelector(".mds-text-field__input").disabled = false;
   document.querySelector(".mds-switch__checkbox").disabled = false;
